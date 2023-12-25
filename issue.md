@@ -328,6 +328,8 @@ const whereClause = {};
 - modelsを作成し、viewsで呼び出して表示
 - モデルを取得する処理：findAll（whereなど）, findByPk（ID指定）を使用
 
+## 修正前コミット1226
+
 
 
 

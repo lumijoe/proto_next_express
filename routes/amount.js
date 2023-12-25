@@ -4,6 +4,7 @@ const express = require('express');
 const router = express.Router();
 const sqlite3 = require('sqlite3');
 const { check, validationResult } = require('express-validator');
+const Amount = require('../models/amount');
 
 // データベースオブジェクトの取得
 const db = new sqlite3.Database('cashnyan.sqlite3');
