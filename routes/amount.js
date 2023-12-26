@@ -30,7 +30,7 @@ router.get('/', (req, res, next) => {
             // データベースアクセス完了時の処理
             if (!err) {
                 var data = {
-                    title: 'CashNyan',
+                    title: '支出一覧',
                     content: rows // 取得したレコードデータ
                 };
                 res.render('amount/index', data);

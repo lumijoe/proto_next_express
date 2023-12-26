@@ -10,27 +10,58 @@
     <link rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         crossorigin="anonymous" />
-    <link rel="stylesheet"
-        href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
 <body class="container">
-    <header>
-        <h1 class="display-4"><%= title %></h1>
-    </header>
-    <div role="main">
-        <table class="table">
-            <% for(var i in content) { %>
-            <tr>
-                <% var obj = content[i]; %>
-                <th><%= obj.category %></th>
-                <td><%= obj.amountIncome %></td>
-                <td><%= obj.amountExpenditure %></td>
-                <td><%= obj.amountBalance %></td>
-            </tr>
-            <% } %>
-        </table>
-    </div>
+    <!-- タイトル -->
+    <img src="/images/favicon.ico" alt="キャッシュニャンアイコン" width="52" height="52">
+    <h1>CashNyan</h1>
+    <p>まいにち、猫と。<br>支出管理はキャッシュニャン</p>
+    
+    
+    <!-- モバイルイメージ -->
+    <div class="position-relative">
+        <img src="/images/mobile.png" alt="モバイルイメージ" width="500px" height="auto">
+        <h2 style="position: absolute; top: 120px; left: 60px; color: white;">一覧リスト</h2>
 
+        <!-- モバイルヒーロー -->
+        <img src="/images/product01.jpg" alt="モバイルやガジェットなどの消費商品イメージ" width="363px" height="auto" style="position: absolute; top: 169px; left:41px;">
+        
+        <!-- 一覧リスト -->
+        <div style="position: absolute; top:430px; left: 85px; height: 400px; overflow-y: scroll;">
+            <table class="table">
+                <% for(var i in content) { %>
+                <tr>
+                    <% var obj = content[i]; %>
+                    <th><%= obj.category %></th>
+                    <td><%= obj.amountIncome %></td>
+                    <td><%= obj.amountExpenditure %></td>
+                    <td><%= obj.amountBalance %></td>
+                </tr>
+                <% } %>
+            </table>
+        </div>
+
+      
+
+      <!-- モバイルボトムナビ -->
+      <div style="background-color: rgba(255, 255, 255, 0.95); width: 363px; height: 60px; position: absolute; top: 775px; left: 41px; border-radius: 0px 0px 30px 30px; align-items: center;">
+        <div class="d-flex flex-row justify-content-around" style="margin-top: 8px;">
+          <div></div>
+          <div>
+            <img src="/images/iconMemo.svg" alt="入力をイメージしたアイコン" style="width:30px; height: 30px;">
+            <p style="font-size: 10px; text-align: center;">入力</p>
+          </div>
+          <div>
+            <img src="/images/iconList.svg" alt="一覧リストをイメージしたアイコン" style="width:30px; height: 30px;">
+            <p style="font-size: 10px; text-align: center;">一覧</p>
+          </div>
+          <div></div>
+
+        </div>
+      </div>
+    </div>  
     
 </body>
 </html>
