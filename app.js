@@ -1,5 +1,4 @@
 // app.js
-// list4-15(p215)1122
 
 // 1:モジュールのrequire
 var createError = require('http-errors');        // error（エラー対処）
