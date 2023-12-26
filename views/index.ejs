@@ -70,27 +70,32 @@
 
       <!-- モバイルヒーロー -->
       <img src="/images/catHero.jpg" alt="クリスマスらしきゴールド照明の背景の中で猫がソファに横たわりながらこちらを向いている画像" width="363px" height="auto" style="position: absolute; top: 169px; left:41px;">
+      
       <!-- 入力フォーム -->
-      <div style="position: absolute; top: 450px; left: 108px; margin-top: -30px;">
+      <div style="position: absolute; top: 450px; left: 108px; margin-top: -10px;">
         <form method="post" action="/amount/add">
+          <!-- カテゴリ -->
           <div class="form-group">
             <label for="category" style="margin: 0;">カテゴリ</label>
-            <input type="text" name="category" id="category" class="form-control">
+            <input type="text" name="category" id="category" class="form-control" value="銀行C">
           </div>
-           
-          <div class="form-group">
-            <label for="amountBalance" style="margin: 0;">残高</label>
-            <input type="number" name="amountBalance" id="amountBalance" class="form-control" readonly>
-          </div>
-          
-          <div class="form-group">
-            <label for="amountExpenditure" style="margin: 0;">支出金額</label>
-            <input type="number" name="amountExpenditure" id="amountExpenditure" class="form-control">
-          </div>
-          <div class="form-group">
+          <!-- 収入 -->
+          <div class="form-group" style="margin-top: -10px;">
             <label for="amountIncome" style="margin: 0;">収入金額</label>
             <input type="number" name="amountIncome" id="amountIncome" class="form-control">
           </div>
+          <!-- 支出 -->
+          <div class="form-group" style="margin-top: -10px;">
+            <label for="amountExpenditure" style="margin: 0;">支出金額</label>
+            <input type="number" name="amountExpenditure" id="amountExpenditure" class="form-control">
+          </div>
+          <!-- 残高自動計算 -->
+          <div class="form-group" style="margin-top: -10px;">
+            <label for="amountBalance" style="margin: 0;">残高
+            <span style="font-size: 10px; color: rgb(16, 137, 141);">収入-支出（自動計算）</span></label>
+            <input type="number" name="amountBalance" id="amountBalance" class="form-control" readonly>
+          </div>
+          <!-- 保存ボタン -->
           <div style="text-align: center;">
             <button type="submit"
             id="submitBtn" style="font-size: 12px; background-color:black; border-style: none; color: white; height: 40px; width: 120px; border-radius: 50px 50px; justify-content: center;">保存する</button>
@@ -100,8 +105,20 @@
       <!-- 入力フォームここまで -->
 
       <!-- モバイルボトムナビ -->
-      <div style="background-color: aquamarine; width: 363px; height: 60px; position: absolute; top: 775px; left: 41px; border-radius: 0px 0px 30px 30px;">
-        <p>1</p>
+      <div style="background-color: rgba(218, 218, 218, 0.3); width: 363px; height: 60px; position: absolute; top: 775px; left: 41px; border-radius: 0px 0px 30px 30px; align-items: center;">
+        <div class="d-flex flex-row justify-content-around" style="margin-top: 8px;">
+          <div></div>
+          <div>
+            <img src="/images/iconMemo.svg" alt="入力をイメージしたアイコン" style="width:30px; height: 30px;">
+            <p style="font-size: 10px; text-align: center;">入力</p>
+          </div>
+          <div>
+            <img src="/images/iconList.svg" alt="一覧リストをイメージしたアイコン" style="width:30px; height: 30px;">
+            <p style="font-size: 10px; text-align: center;">一覧</p>
+          </div>
+          <div></div>
+
+        </div>
       </div>
     </div>
   </body>
