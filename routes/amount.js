@@ -20,16 +20,6 @@ db.serialize(() => {
     `);
 });
 
-// GET request to /amount
-router.get('/', function(req, res, next) {
-    // Render the amount/index.ejs view
-    res.render('amount/index', { title: 'Amount Index' });
-  });
-
-
-
-
-
 // アクセス処理GET
 router.get('/', (req, res, next) => {
 
