@@ -57,44 +57,53 @@
     </script>
   </head>
   <body>
+    <!-- タイトル -->
     <img src="/images/favicon.ico" alt="キャッシュニャンアイコン" width="52" height="52">
     <h1><%= title %></h1>
     <p>まいにち、猫と。<br>支出管理はキャッシュニャン</p>
+    
+    
     <!-- モバイルイメージ -->
     <div class="position-relative">
       <img src="/images/mobile.png" alt="キャッシュニャンアイコン" width="500px" height="auto">
-      <h2 style="position: absolute; top: 150px; left: 60px; color: white;">支出入力</h2>
+      <h2 style="position: absolute; top: 120px; left: 60px; color: white;">支出入力</h2>
+
       <!-- モバイルヒーロー -->
-      <img src="/images/catHero.jpg" alt="クリスマスらしきゴールド照明の背景の中で猫がソファに横たわりながらこちらを向いている画像" width="363px" height="auto" style="position: absolute; top: 199px; left:41px;">
+      <img src="/images/catHero.jpg" alt="クリスマスらしきゴールド照明の背景の中で猫がソファに横たわりながらこちらを向いている画像" width="363px" height="auto" style="position: absolute; top: 169px; left:41px;">
+      <!-- 入力フォーム -->
+      <div style="position: absolute; top: 450px; left: 108px; margin-top: -30px;">
+        <form method="post" action="/amount/add">
+          <div class="form-group">
+            <label for="category" style="margin: 0;">カテゴリ</label>
+            <input type="text" name="category" id="category" class="form-control">
+          </div>
+           
+          <div class="form-group">
+            <label for="amountBalance" style="margin: 0;">残高</label>
+            <input type="number" name="amountBalance" id="amountBalance" class="form-control" readonly>
+          </div>
+          
+          <div class="form-group">
+            <label for="amountExpenditure" style="margin: 0;">支出金額</label>
+            <input type="number" name="amountExpenditure" id="amountExpenditure" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="amountIncome" style="margin: 0;">収入金額</label>
+            <input type="number" name="amountIncome" id="amountIncome" class="form-control">
+          </div>
+          <div style="text-align: center;">
+            <button type="submit"
+            id="submitBtn" style="font-size: 12px; background-color:black; border-style: none; color: white; height: 40px; width: 120px; border-radius: 50px 50px; justify-content: center;">保存する</button>
+          </div>
+        </form>
+      </div>
+      <!-- 入力フォームここまで -->
 
-
-      
-      <!-- 以下にフォームのコードを追加 -->
-      <form method="post" action="/amount/add">
-        <div class="form-group">
-          <label for="category">カテゴリ</label>
-          <input type="text" name="category" id="category" class="form-control">
-        </div>
-         
-        <div class="form-group">
-          <label for="amountBalance">残高</label>
-          <input type="number" name="amountBalance" id="amountBalance" class="form-control" readonly>
-        </div>
-        
-        <div class="form-group">
-          <label for="amountExpenditure">支出金額</label>
-          <input type="number" name="amountExpenditure" id="amountExpenditure" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="amountIncome">収入金額</label>
-          <input type="number" name="amountIncome" id="amountIncome" class="form-control">
-        </div>
-        <input type="submit" value="作成" class="btn btn-primary" id="submitBtn">
-      </form>
-      <!-- フォームのコード終了 -->
-
+      <!-- モバイルボトムナビ -->
+      <div style="background-color: aquamarine; width: 363px; height: 60px; position: absolute; top: 775px; left: 41px; border-radius: 0px 0px 30px 30px;">
+        <p>1</p>
+      </div>
     </div>
-
   </body>
 </html>
 
